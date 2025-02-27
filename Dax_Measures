@@ -1,0 +1,37 @@
+● Presence % is calculated by dividing the number of present days by the total working days. This measure ensures that employees marked as present or working remotely 
+contribute to the attendance percentage.  
+
+Presence % = DIVIDE([Present Days],[Total Working Days],0)  
+
+● Present Days calculates the total number of present days, including both physically present employees and those working from home. It counts the occurrences of "P" 
+(Present) while also adding the work-from-home count.  
+
+Present Days =  
+var presentdays = CALCULATE(COUNT(FinalData[Value]), FinalData[Value] ="P")  
+RETURN  
+presentdays + SUM(FinalData[WFH Count])  
+
+● SL % calculates the percentage of sick leave days relative to the total number of present days.  
+
+SL % = DIVIDE([SL Count],[Present Days],0)  
+
+● SL Count sums up all recorded sick leave occurrences in the dataset.  
+
+SL Count = SUM(FinalData[SL Count])  
+
+● Total Working Days is derived by counting the total number of recorded days while excluding weekends and holidays, ensuring only actual working days are considered.  
+
+Total Working Days =  
+var totaldays = COUNT(FinalData[Value])  
+var nonworkdays = CALCULATE(COUNT(FinalData[Value]), FinalData[Value] in {"WO","HO"})  
+RETURN  
+totaldays - nonworkdays  
+
+● WFH Count aggregates all recorded instances of employees working from home.  
+
+WFH Count = SUM(FinalData[WFH Count])  
+
+● WFH% determines the percentage of work-from-home days relative to the total present days, providing insights into remote work trends.  
+
+WFH% = DIVIDE([WFH Count],[Present Days],0)  
+
