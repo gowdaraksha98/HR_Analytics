@@ -1,0 +1,50 @@
+HR Analytics Dashboard (Power BI + Excel)
+This Power BI dashboard provides an in-depth HR Analytics report, focusing on employee presence, work-from-home (WFH) trends, and sick leave (SL) analysis. The data was 
+sourced from an Excel file, cleaned, and transformed using Power BI Power Query Editor to ensure accurate insights.
+This dashboard helps HR teams and management track attendance patterns, improve workforce efficiency, and make data-driven decisions regarding remote work and employee 
+well-being.
+________________________________________
+
+Key Features & Insights
+
+Data Preparation & Transformation
+•	The dataset was sourced from Excel and processed in Power BI Power Query Editor.
+•	Data cleaning involved handling missing values, formatting dates, and standardizing columns.
+
+KPI Summary (Top Panel)
+•	Presence %: 91.83% (Average employee attendance).
+•	Work-From-Home % (WFH %): 10.00% (Average percentage of employees working remotely).
+•	Sick Leave % (SL %): 1.20% (Average percentage of employees on sick leave).
+
+Presence Trends (Line Charts - Top Section)
+•	Presence % by Date: Tracks overall employee attendance across time.
+•	Presence % by Day of Week: Highlights which days have the highest attendance (Monday: 93.21%).
+
+WFH Trends (Middle Section)
+•	WFH % by Date: Shows fluctuations in remote work over time.
+•	WFH % by Day of Week: Indicates that Friday has the highest WFH rate (13.01%).
+
+Sick Leave Trends (Bottom Section)
+•	SL % by Date: Monitors sick leave trends over time.
+•	SL % by Day of Week: Tuesday has the highest sick leave rate (1.74%).
+
+Employee-Wise Attendance Table (Right Panel)
+•	Displays individual presence %, WFH %, and SL % per employee.
+•	Allows HR teams to track employee-level attendance patterns.
+________________________________________
+Business Use Case
+This dashboard helps HR professionals and business leaders:
+•	Track attendance & remote work trends to optimize workforce planning.
+•	Identify patterns in sick leave usage to improve employee well-being programs.
+•	Assess productivity levels based on presence and WFH data.
+•	Support HR decision-making with real-time insights.
+________________________________________
+Files Included in GitHub
+•	Power BI .pbix file
+•	Excel Dataset (HR_analytics_data.xlsx)
+•	Dashboard Screenshots
+•	DAX Calculations (DAX_calculations.txt)
+•	README.md (Detailed project documentation)
+________________________________________
+
+
